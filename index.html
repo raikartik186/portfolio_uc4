@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="Kartik Rai (Underrated Coder)" />
+    <meta property="og:description" content="Portfolio Website of Kartik Rai" />
+    <meta
+      property="og:image"
+      content="https://github.com/raikartik186/Portfolio-Website/blob/main/images/phone-preview.png?raw=true"
+    />
+    <meta
+      property="og:url"
+      content="https://raikartik186.github.io/Portfolio-Website/"
+    />
+    <meta property="og:type" content="website" />
+
+    <link
+      rel="icon"
+      href="images/favicon.png"
+      sizes="16x16"
+      type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+
+    <title>Kartik Rai (Underrated Coder)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/cb31bfb0c6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" alt="" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <div class="header-text">
+          <p>Full Stack Developer</p>
+          <h1>Hi, I'm <span>Kartik Rai</span><br />from India</h1>
+        </div>
+      </div>
+    </div>
+
+    <!---------------About Section----------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p style="text-align: justify; padding-top: 20px">
+              As a passionate content creator on YouTube, I share my expertise
+              in coding and software development, offering insights and
+              tutorials to help fellow enthusiasts navigate the ever-evolving
+              world of technology. With a background as a professional
+              full-stack developer in the industry, I bring real-world
+              experience to my engaging content. Committed to continuous
+              learning and fostering a community of learners, I aim to make
+              complex coding concepts accessible and enjoyable. Join me on this
+              journey of exploration and mastery in the dynamic field of
+              software development!
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>LANGUAGES</span><br />JavaScript, Java, C#, Python,
+                  TypeScript, PHP, SQL
+                </li>
+                <li>
+                  <span>FRONTEND TECHNOLOGIES</span><br />AngularJS, ReactJS,
+                  Redux, JavaScript, ReactNative, jQuery, Bootstrap, HTML, CSS
+                </li>
+                <li>
+                  <span>BACKEND TECHNOLOGIES</span><br />Javascript, NodeJS,
+                  ExpressJS, .Net, PHP, Java, API
+                </li>
+                <li>
+                  <span>DATABASE</span><br />MySQL, MongoDB, Postgres, MS SQL
+                  Server
+                </li>
+                <li>
+                  <span>DEVELOPER TOOLS</span><br />Git, GitHub, GitLab, TFS,
+                  Postman, Jira
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Sriggle Tech Pvt. Ltd.</span><br />Full Stack Developer
+                  (January 2024 - Present)
+                </li>
+                <li>
+                  <span>NEC India Pvt. Ltd.</span><br />Software Engineer
+                  (October 2022 - January 2024)
+                </li>
+                <li>
+                  <span>Isnartech Pvt. Ltd.</span><br />Full Stack Developer
+                  Intern (June 2022 - October 2022)
+                </li>
+                <li>
+                  <span>Coding Ninjas</span><br />Teaching Assistant (July 2022
+                  - October 2022)
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>B.TECH</span><br />Greater Noida Institute of technology
+                  (AKTU) <br />
+                  2019-2023
+                </li>
+                <li>
+                  <span>SENIOR SECONDARY</span><br />D.T.E.A. Sr. Secondary
+                  School (CBSE) <br />
+                  2017-2019
+                </li>
+                <li>
+                  <span>SECONDARY</span><br />Paramount International School
+                  (CBSE) <br />
+                  2015-2017
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+        // console.log(tabcontents);
+        
+
+        function opentab(tabname){
+            for (i of tablinks){
+                i.classList.remove("active-link");
+            }
+            for (i of tabcontents){
+                i.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+  </body>
+</html>
